@@ -27,13 +27,13 @@
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--primary-white-color);
+  color: $primary-white-color;
 }
 
 .mainbutton {
   display: inline-block;
   font-family: inherit;
-  background-color: var(--accent-color);
+  background-color: $accent-color;
   color: #ffffff;
   padding: 10px 32px;
   min-width: 200px;
@@ -51,5 +51,5 @@
 }
 
 .mainbutton:hover {
-  background-color: var(--secondary-accent-color);
+  background-color: $secondary-accent-color;
 }

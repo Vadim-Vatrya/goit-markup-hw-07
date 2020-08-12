@@ -18,7 +18,7 @@
 .advantages-item {
   display: flex;
   height: 120px;
-  background-color: var(--secondary-bcg-color);
+  background-color: $secondary-bcg-color;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
@@ -38,10 +38,10 @@
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-  color: var(--secondary-text-color);
+  color: $secondary-text-color;
   margin-bottom: 10px;
 }
 
 .decoration {
-  color: var(--primary-text-color);
+  color: $primary-text-color;
 }

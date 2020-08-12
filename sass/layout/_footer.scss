@@ -1,12 +1,12 @@
 /* Подвал */
 
 .footer-section {
-  background-color: var(--primary-bcg-color);
+  background-color: $primary-bcg-color;
 }
 
 .footer-section .container {
   display: flex;
-  background-color: var(--primary-bcg-color);
+  background-color: $primary-bcg-color;
 }
 
 .contact {
@@ -17,11 +17,11 @@
 
 .footer-section .logo {
   display: flex;
-  color: var(--primary-white-color);
+  color: $primary-white-color;
   margin-bottom: 20px;
 }
 .footer {
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 .adress-list {
@@ -55,25 +55,25 @@
 .phone {
   font-style: normal;
   line-height: 1.71px;
-  color: var(--primary-text-color);
+  color: $primary-text-color;
 }
 
 /* .mail:hover,
 .mail:focus,
 .phone:hover,
 .phone:focus {
-  color: var(--accent-color);
+  color: $accent-color;
 } */
 
 .map {
   font-style: normal;
-  color: var(--primary-white-color);
+  color: $primary-white-color;
 }
 
 .footer-section .title {
   font-weight: bold;
   text-transform: uppercase;
-  color: var(--primary-white-color);
+  color: $primary-white-color;
 }
 
 .title-list {
@@ -98,19 +98,19 @@
   height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  color: var(--primary-white-color);
+  color: $primary-white-color;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-icon-list {
   width: 20px;
   height: 20px;
-  fill: var(--primary-white-color);
+  fill: $primary-white-color;
 }
 
 .footer-icon:hover,
 .footer-icon:focus {
-  background-color: var(--accent-color);
+  background-color: $accent-color;
 }
 
 /* Кнопка подвала */
@@ -128,7 +128,7 @@
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--primary-white-color);
+  color: $primary-white-color;
 }
 
 .subcribe__container {
@@ -147,7 +147,7 @@
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  color: var(--primary-white-color);
+  color: $primary-white-color;
 }
 
 .subcribe__input::placeholder {
@@ -163,7 +163,7 @@
   align-items: center;
   width: 200px;
   height: 50px;
-  background-color: var(--accent-color);
+  background-color: $accent-color;
   color: #ffffff;
   padding: 10px 32px;
   min-width: 200px;
@@ -185,5 +185,5 @@
 .subcribe__icon {
   width: 24px;
   height: 24px;
-  fill: var(--primary-white-color);
+  fill: $primary-white-color;
 }
