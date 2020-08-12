@@ -1,0 +1,47 @@
+/* Преимущества*/
+
+.section .container {
+  display: flex;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.advantages-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+}
+.advantages-item {
+  display: flex;
+  height: 120px;
+  background-color: var(--secondary-bcg-color);
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.icon-advantages {
+  width: 70px;
+  height: 70px;
+}
+
+.item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
+  margin-bottom: 10px;
+}
+
+.decoration {
+  color: var(--primary-text-color);
+}
