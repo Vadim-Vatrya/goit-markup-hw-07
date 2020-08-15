@@ -147,17 +147,6 @@ header {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-// .contact-list .contacts-links:focus,
-// .contact-list .contacts-links:hover,
-// .contacts-links:hover .icon-smartphone,
-// .contacts-links:focus .icon-smartphone,
-// .contacts-links:hover .icon-envelope,
-// .contacts-links:focus .icon-envelope {
-//   color: $accent-color;
-//   fill: $accent-color;
-//   position: relative;
-// }
-
 .contacts-links {
   color: $primary-text-color;
 }
