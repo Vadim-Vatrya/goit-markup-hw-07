@@ -504,6 +504,10 @@ header {
   flex-direction: column;
 }
 
+.item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .advantages-item {
   display: flex;
   height: 120px;
@@ -516,10 +520,6 @@ header {
 .icon-advantages {
   width: 70px;
   height: 70px;
-}
-
-.item:not(:last-child) {
-  margin-right: 30px;
 }
 
 .title {
