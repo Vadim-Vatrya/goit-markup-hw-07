@@ -31,7 +31,8 @@
 }
 
 .mainbutton {
-  display: inline-flex;
+  @extend .subcribe__btn;
+  font-family: inherit;
 
   &:hover {
     background-color: $secondary-accent-color;
