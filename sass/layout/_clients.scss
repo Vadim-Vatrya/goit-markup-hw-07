@@ -14,16 +14,16 @@
   border-radius: 4px;
   border: 1px solid #afb1b8;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.item-link:hover,
-.item-link:focus {
-  border-color: $accent-color;
-}
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+  }
 
-.item-link:hover .client_logo,
-.item-link:focus .client_logo {
-  fill: $accent-color;
+  &:hover .client_logo,
+  &:focus .client_logo {
+    fill: $accent-color;
+  }
 }
 
 .client_logo {

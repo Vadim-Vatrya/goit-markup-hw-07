@@ -634,10 +634,18 @@ header {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.social-list-icon-list:hover, .social-list-icon-list:focus {
+  background-color: #2196f3;
+}
+
 .social-list-icon-link-svg {
   width: 20px;
   height: 20px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-list-icon-link-svg:hover, .social-list-icon-link-svg:focus {
+  fill: #ffffff;
 }
 
 .team-title-position {
@@ -646,16 +654,6 @@ header {
   text-align: center;
   color: #757575;
   margin-bottom: 16px;
-}
-
-.social-list-icon-list:hover,
-.social-list-icon-list:focus {
-  background-color: #2196f3;
-}
-
-.social-list-icon-link-svg:hover,
-.social-list-icon-link-svg:focus {
-  fill: #ffffff;
 }
 
 /* Клиенты */
@@ -675,8 +673,7 @@ header {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.item-link:hover,
-.item-link:focus {
+.item-link:hover, .item-link:focus {
   border-color: #2196f3;
 }
 
@@ -700,16 +697,22 @@ header {
   background-color: #2f303a;
 }
 
-.contact {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  margin-right: 69px;
-}
-
 .footer-section .logo {
   display: flex;
   color: #e0dfe6;
   margin-bottom: 20px;
+}
+
+.footer-section .title {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #e0dfe6;
+}
+
+.contact {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-right: 69px;
 }
 
 .footer {
@@ -734,15 +737,6 @@ header {
   display: block;
 }
 
-.title-list {
-  display: flex;
-  justify-content: space-between;
-}
-
-.title-list-icon:not(:last-child) {
-  margin-right: 10px;
-}
-
 .mail,
 .phone {
   font-style: normal;
@@ -750,25 +744,14 @@ header {
   color: #757575;
 }
 
-/* .mail:hover,
-.mail:focus,
-.phone:hover,
-.phone:focus {
-  color: $accent-color;
-} */
 .map {
   font-style: normal;
   color: #e0dfe6;
 }
 
-.footer-section .title {
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #e0dfe6;
-}
-
 .title-list {
   display: flex;
+  justify-content: space-between;
 }
 
 .title-list-icon {
@@ -793,15 +776,14 @@ header {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.footer-icon:hover, .footer-icon:focus {
+  background-color: #2196f3;
+}
+
 .footer-icon-list {
   width: 20px;
   height: 20px;
   fill: #e0dfe6;
-}
-
-.footer-icon:hover,
-.footer-icon:focus {
-  background-color: #2196f3;
 }
 
 /* Кнопка подвала */

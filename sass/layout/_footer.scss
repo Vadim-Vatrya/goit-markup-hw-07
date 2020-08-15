@@ -2,11 +2,22 @@
 
 .footer-section {
   background-color: $primary-bcg-color;
-}
 
-.footer-section .container {
-  display: flex;
-  background-color: $primary-bcg-color;
+  .container {
+    display: flex;
+    background-color: $primary-bcg-color;
+  }
+
+  .logo {
+    display: flex;
+    color: $secondary-white-color;
+    margin-bottom: 20px;
+  }
+  .title {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $secondary-white-color;
+  }
 }
 
 .contact {
@@ -15,11 +26,6 @@
   margin-right: 69px;
 }
 
-.footer-section .logo {
-  display: flex;
-  color: $secondary-white-color;
-  margin-bottom: 20px;
-}
 .footer {
   color: $accent-color;
 }
@@ -42,15 +48,6 @@
   display: block;
 }
 
-.title-list {
-  display: flex;
-  justify-content: space-between;
-}
-
-.title-list-icon:not(:last-child) {
-  margin-right: 10px;
-}
-
 .mail,
 .phone {
   font-style: normal;
@@ -58,36 +55,24 @@
   color: $primary-text-color;
 }
 
-/* .mail:hover,
-.mail:focus,
-.phone:hover,
-.phone:focus {
-  color: $accent-color;
-} */
-
 .map {
   font-style: normal;
   color: $secondary-white-color;
 }
 
-.footer-section .title {
-  font-weight: bold;
-  text-transform: uppercase;
-  color: $secondary-white-color;
-}
-
 .title-list {
   display: flex;
+  justify-content: space-between;
 }
 
 .title-list-icon {
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.title-list-icon:not(:last-child) {
-  margin-right: 10px;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
 }
 
 .footer-icon {
@@ -100,17 +85,17 @@
   background-color: rgba(255, 255, 255, 0.1);
   color: $secondary-white-color;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
 }
 
 .footer-icon-list {
   width: 20px;
   height: 20px;
   fill: $secondary-white-color;
-}
-
-.footer-icon:hover,
-.footer-icon:focus {
-  background-color: $accent-color;
 }
 
 /* Кнопка подвала */
