@@ -110,15 +110,6 @@ header {
   display: flex;
   align-items: center;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover .icon-smartphone,
-  &:focus .icon-smartphone,
-  &:hover .icon-envelope,
-  &:focus .icon-envelope {
-    color: $accent-color;
-    fill: $accent-color;
-    position: relative;
-  }
 }
 
 .auth-nav-item {
@@ -139,12 +130,17 @@ header {
   margin-right: 10px;
   fill: $primary-text-color;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .contacts-links:hover &,
+  .contacts-link:focus & {
+    color: $accent-color;
+    fill: $accent-color;
+    position: relative;
+  }
 }
 
 .icon-smartphone {
-  margin-right: 10px;
-  fill: $primary-text-color;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @extend .icon-envelope;
 }
 
 .contacts-links {
