@@ -16,10 +16,14 @@
     <!--Шапка сайта-->
     <header class="header">
       <div class="container">
-        <nav class="navigation">
-          <a href="./index.html" class="logo link"
-            ><span class="header link">Web</span> Studio</a
-          >
+        <a href="./index.html" class="logo link"><span class="header link">Web</span> Studio</a>
+        <button type="button" class="menu-btn" aria-expanded="false" aria-controls="navigation"  data-menu-button>
+          <svg width=40px height=40px>
+            <use class="icon-menu" href=./images/sprite.svg#icon-menu></use>
+            <use class="icon-cross" href=./images/sprite.svg#icon-close></use>
+          </svg>
+        </button>
+      <div class="navigation" data-menu>
           <ul class="site-nav list">
             <li class="site-nav-item">
               <a class="site-nav-list link current" href="./index.html"
@@ -53,8 +57,7 @@
                 ><svg
                   class="icon-smartphone"
                   width="10"
-                  height="15
-                "
+                  height="15"
                 >
                   <use href="./images/sprite.svg#icon-smartphone"></use>
                 </svg>
@@ -64,14 +67,15 @@
           </ul>
         </div>
       </div>
+      </div>
     </header>
 
-<!--Герой-->
 
-    <main>
-      
-      <section class="hero">
-        <div class="container-hero">
+<!-- Главный контент страницы
+    <main> -->
+      <!--Герой-->
+      <!-- <section class="hero">
+        <div class="container">
           <h1 class="hero-item">
             Эффективные решения <br />
             для вашего бизнеса
@@ -125,11 +129,11 @@
                 </svg>
               </button>
         </div>
-      </section>
+      </section> -->
 
       <!--Преимущества-->
 
-      <section class="section">
+      <!-- <section class="section">
         <div class="container">
           <h2 hidden class="section-title">Преимущества</h2>
           <ul class="advantages-list list">
@@ -186,11 +190,11 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
       <!--Чем мы занимаемся-->
 
-      <section class="section">
+      <!-- <section class="section">
         <div class="container">
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="working-list list">
@@ -226,11 +230,11 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
       <!--Наша команда-->
 
-      <section class="team">
+      <!-- <section class="team">
         <div class="container">
           <h2 class="section-title">Наша команда</h2>
           <ul class="team-title list">
@@ -452,11 +456,11 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
       <!--Постоянные клиенты-->
 
-      <section class="section">
+      <!-- <section class="section">
         <div class="container">
           <h2 class="section-title">Постоянные клиенты</h2>
           <ul class="client-list list">
@@ -505,11 +509,12 @@
           </ul>
         </div>
       </section>
-    </main>
+    </main> -->
 
     <!--Футер-->
 
-    <footer class="footer-section">
+    <!-- <footer class="footer-section">
+
       <div class="container">
         <div class="contact">
           <a class="logo link" href="./index.html" lang="en"
@@ -587,7 +592,8 @@
           </form>
         </div>  
       </div>
-    </footer>
+    </footer>-->
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
-</html>
+</html> 
