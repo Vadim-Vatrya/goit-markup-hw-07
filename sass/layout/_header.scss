@@ -1,18 +1,39 @@
 /* Верхняя линия */
 
+/* Оформление логотипа */
+
+.logo {
+  display: block;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: $secondary-text-color;
+  text-decoration: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.logo-decoration {
+  color: $accent-color;
+}
+
+@media screen and (max-width: 767px) {
+  header {
+    position: relative;
+
+    max-width: 767px;
+    margin: 0 auto;
+  }
+}
+
 .header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
-}
-.menu-btn {
-  position: relative;
-  border: none;
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  z-index: 999;
+  height: 60px;
 }
 
 header {
@@ -24,25 +45,77 @@ header {
   display: none;
 }
 
-.navigation {
+/* Меню навигации */
+
+.navigation-wrapper {
   position: absolute;
   top: 100%;
+  display: none;
   right: 0;
   width: 100%;
   height: 453px;
   background: $primary-white-color;
+
+  &.is-open {
+    display: block;
+    z-index: 2;
+  }
 }
 
-.navigation .icon-cross {
+/*Кнопка  меню навигации */
+
+.menu-btn {
+  position: relative;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+.menu-btn.icon-cross {
   display: none;
 }
 
-.navigation .is-open .icon-cross {
+.menu-btn.is-open .icon-cross {
   display: block;
 }
 
-.navigation .is-open .icon-menu {
+.menu-btn.is-open .icon-menu {
   display: none;
+}
+
+/* Оформление навигации */
+
+.site-nav,
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.auth-nav {
+  display: flex;
+}
+
+.site-nav-list {
+  position: relative;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: $accent-color;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.auth-nav {
+  @extend .site-nav-list;
+  display: flex;
+  align-items: center;
+  color: $primary-text-color;
 }
 
 // .navigation {
