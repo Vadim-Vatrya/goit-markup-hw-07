@@ -14,18 +14,9 @@
   text-decoration: none;
   padding-top: 16px;
   padding-bottom: 16px;
-}
 
-.logo-decoration {
-  color: $accent-color;
-}
-
-@media screen and (max-width: 767px) {
-  header {
-    position: relative;
-
-    max-width: 767px;
-    margin: 0 auto;
+  &-decoration {
+    color: $accent-color;
   }
 }
 
@@ -33,7 +24,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60px;
 }
 
 header {
@@ -41,52 +31,25 @@ header {
   border-bottom: 1px solid #ececec;
 }
 
+header .section {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
 .icon-cross {
   display: none;
 }
 
-/* Меню навигации */
+// .navigation-wrapper {
+//   display: flex;
+//   &.is-open {
+//     display: block;
+//   }
 
-.navigation-wrapper {
-  position: absolute;
-  top: 100%;
-  display: none;
-  right: 0;
-  width: 100%;
-  height: 453px;
-  background: $primary-white-color;
+/* оформление навигации сайта */
 
-  &.is-open {
-    display: block;
-    z-index: 2;
-  }
-}
-
-/*Кнопка  меню навигации */
-
-.menu-btn {
-  position: relative;
-  border: none;
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-}
-.menu-btn.icon-cross {
-  display: none;
-}
-
-.menu-btn.is-open .icon-cross {
-  display: block;
-}
-
-.menu-btn.is-open .icon-menu {
-  display: none;
-}
-
-/* Оформление навигации */
-
-.site-nav,
-.navigation {
+.navigation,
+.site-nav {
   display: flex;
   align-items: center;
 }
@@ -97,13 +60,13 @@ header {
 
 .site-nav-list {
   position: relative;
-  font-family: Roboto;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.17;
   letter-spacing: 0.02em;
-  color: $accent-color;
+  color: $secondary-text-color;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus {
@@ -111,145 +74,173 @@ header {
   }
 }
 
-.auth-nav {
+.contacts-links {
   @extend .site-nav-list;
   display: flex;
   align-items: center;
   color: $primary-text-color;
 }
 
-// .navigation {
-//   display: flex;
-//   align-items: center;
-// }
+.icon-smartphone {
+  margin-right: 10px;
+  fill: $primary-text-color;
 
-// .logo {
-//   font-family: "Raleway", sans-serif;
-//   font-weight: bold;
-//   font-size: 26px;
-//   line-height: 1.19;
-//   letter-spacing: 0.03em;
-//   color: $main-black-color;
-//   margin-right: 85px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-//   .header {
-//     color: $accent-color;
-//   }
-// }
+  .contacts-links:focus &,
+  .contacts-links:hover & {
+    fill: $accent-color;
+  }
+}
 
-// .site-nav {
-//   display: flex;
-// }
+.icon-envelope {
+  @extend .icon-smartphone;
+}
 
-// .site-nav-item:not(:last-child) {
-//   margin-right: 50px;
-// }
+/* Оформление линии на активной странице*/
 
-// .site-nav-list {
-//   font-weight: 500;
-//   font-size: 14px;
-//   line-height: 1.14;
-//   letter-spacing: 0.02em;
-//   color: $secondary-text-color;
-//   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.current {
+  color: $accent-color;
+  fill: $accent-color;
 
-//   .logo {
-//     font-family: "Raleway", sans-serif;
-//     font-weight: bold;
-//     font-size: 26px;
-//     line-height: 1.19;
-//     letter-spacing: 0.03em;
-//     color: $main-black-color;
-//   }
+  &::after {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $accent-color;
+  }
+}
+/* Для мобилки */
 
-//   &:hover,
-//   &:focus {
-//     color: $accent-color;
-//   }
-// }
+@media screen and (max-width: 767px) {
+  header {
+    position: relative;
+    max-width: 767px;
+    margin: 0 auto;
+    height: 60px;
+  }
 
-// .site-nav-list {
-//   display: block;
-//   position: relative;
-//   padding-top: 32px;
-//   padding-bottom: 32px;
-// }
+  .navigation-wrapper {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    height: 453px;
+    text-align: center;
+    background: $primary-white-color;
+    opacity: 0;
+    transform: scale(0);
+    transition: transform 550ms linear;
 
-// .current {
-//   color: $accent-color;
+    &.is-open {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
 
-//   &::after {
-//     content: "";
-//     display: block;
-//     position: absolute;
-//     width: 100%;
-//     height: 4px;
-//     border-radius: 2px;
-//     bottom: 0;
-//     background: $accent-color;
-//     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-//   }
-// }
+  /*Кнопка  меню навигации */
 
-// .auth-nav {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
+  .menu-btn {
+    display: inline-flex;
+    position: relative;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
 
-//   .contacts-links {
-//     padding-top: 32px;
-//     padding-bottom: 32px;
-//   }
-// }
+    &.menu-btn.icon-cross {
+      display: none;
+    }
 
-// .contact-list {
-//   display: flex;
+    &.is-open .icon-cross {
+      display: block;
+    }
 
-//   & .contacts-links:focus,
-//   & .contacts-links:hover {
-//     color: $accent-color;
-//     fill: $accent-color;
-//     position: relative;
-//   }
-// }
+    &.is-open .icon-menu {
+      display: none;
+    }
 
-// .contacts-links {
-//   display: flex;
-//   align-items: center;
-//   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-// }
+    &:hover .icon-cross,
+    &:focus .icon-cross,
+    &:hover .icon-menu,
+    &:focus .icon-menu {
+      fill: $accent-color;
+    }
+  }
 
-// .auth-nav-item {
-//   font-weight: 500;
-//   font-size: 14px;
-//   line-height: 1.14;
-//   letter-spacing: 0.02em;
-//   color: $primary-text-color;
-//   display: flex;
-//   align-items: center;
+  /* Оформление навигации */
 
-//   &:not(:last-child) {
-//     margin-right: 30px;
-//   }
-// }
+  .site-nav,
+  .navigation {
+    display: block;
+    margin-bottom: 60px;
+    padding-top: 60px;
+    // // padding-right: 190px;
+    // // padding-left: 190px;
+  }
 
-// .icon-envelope {
-//   margin-right: 10px;
-//   fill: $primary-text-color;
-//   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .auth-nav {
+    display: block;
+    align-items: center;
+    padding-right: 140px;
+    padding-bottom: 60px;
+    padding-left: 140px;
+  }
 
-//   .contacts-links:hover &,
-//   .contacts-link:focus & {
-//     color: $accent-color;
-//     fill: $accent-color;
-//     position: relative;
-//   }
-// }
+  .site-nav-list {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: $secondary-text-color;
 
-// .icon-smartphone {
-//   @extend .icon-envelope;
-// }
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
 
-// .contacts-links {
-//   color: $primary-text-color;
-// }
+  .site-nav-item:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  .contacts-links {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: $primary-text-color;
+  }
+
+  .auth-nav-item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  .current {
+    color: $accent-color;
+    fill: $accent-color;
+
+    &::after {
+      bottom: -8px;
+    }
+  }
+}
+
+/* Для планшет */
+
+@media screen and (min-width: 768px) {
+  header {
+    max-width: 1199px;
+    margin: 0 auto;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+}
