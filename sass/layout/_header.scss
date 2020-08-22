@@ -179,16 +179,11 @@ header .section {
     display: block;
     margin-bottom: 60px;
     padding-top: 60px;
-    // // padding-right: 190px;
-    // // padding-left: 190px;
   }
 
   .auth-nav {
     display: block;
-    align-items: center;
-    padding-right: 140px;
     padding-bottom: 60px;
-    padding-left: 140px;
   }
 
   .site-nav-list {
@@ -242,5 +237,13 @@ header .section {
 
   .menu-btn {
     display: none;
+  }
+
+  .navigation-wrapper {
+    display: flex;
+  }
+
+  .auth-nav {
+    flex-direction: column;
   }
 }

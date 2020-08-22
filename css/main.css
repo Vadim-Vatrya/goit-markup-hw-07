@@ -517,10 +517,7 @@ header .section {
   }
   .auth-nav {
     display: block;
-    align-items: center;
-    padding-right: 140px;
     padding-bottom: 60px;
-    padding-left: 140px;
   }
   .site-nav-list, .contacts-links {
     font-style: normal;
@@ -564,6 +561,12 @@ header .section {
   }
   .menu-btn {
     display: none;
+  }
+  .navigation-wrapper {
+    display: flex;
+  }
+  .auth-nav {
+    flex-direction: column;
   }
 }
 
