@@ -385,14 +385,13 @@ img {
   justify-content: space-between;
 }
 
-header {
-  background-color: #ffffff;
-  border-bottom: 1px solid #ececec;
-}
-
 header .section {
   padding-top: 0px;
   padding-bottom: 0px;
+}
+
+header {
+  background-color: #ffffff;
 }
 
 .icon-cross {
@@ -462,7 +461,7 @@ header .section {
 
 /* Для мобилки */
 @media screen and (max-width: 767px) {
-  header {
+  header .section {
     position: relative;
     max-width: 767px;
     margin: 0 auto;
@@ -544,29 +543,100 @@ header .section {
   .auth-nav-item:not(:last-child) {
     margin-bottom: 16px;
   }
-  .current {
-    color: #2196f3;
-    fill: #2196f3;
-  }
-  .current::after {
+  ::after {
     bottom: -8px;
   }
 }
 
-/* Для планшет */
+/* Для планшета */
 @media screen and (min-width: 768px) {
-  header {
+  header .section {
     max-width: 1199px;
     margin: 0 auto;
+    height: 80px;
   }
   .menu-btn {
     display: none;
   }
   .navigation-wrapper {
     display: flex;
+    align-items: center;
+  }
+  .navigation {
+    margin-right: 84px;
+  }
+  .site-nav-list, .contacts-links {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: #212121;
+  }
+  .site-nav-item:not(:last-child) {
+    margin-right: 50px;
+  }
+  .contacts-links {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .auth-nav-item:not(:last-child) {
+    margin-bottom: 10px;
   }
   .auth-nav {
     flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  header .section {
+    height: 81px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .logo {
+    margin-right: 85px;
+    font-size: 26px;
+    line-height: 1.19;
+  }
+  .navigation {
+    margin-right: 305px;
+  }
+  .site-nav-list, .contacts-links {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .contacts-links {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .auth-nav {
+    display: flex;
+    flex-direction: row;
+  }
+  .auth-nav-item:not(:last-child) {
+    margin-right: 30px;
+    margin-bottom: 0px;
+  }
+  .current {
+    color: #2196f3;
+    fill: #2196f3;
+  }
+  .current::after {
+    bottom: 0;
   }
 }
 
