@@ -679,7 +679,7 @@ header {
 }
 
 @media screen and (min-width: 768px) {
-  .hero .hero {
+  .hero {
     max-width: 1199px;
     margin: 0 auto;
     background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/header-768.jpg);
@@ -687,21 +687,13 @@ header {
 }
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
-  .hero .hero {
+  .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/header-768@2x.jpg);
   }
 }
 
-@media screen and (min-width: 768px) {
-  .hero .hero {
-    max-width: 1600px;
-    margin: 0 auto;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/header-768.jpg);
-  }
-}
-
-@media screen and (min-width: 768px) and (min-width: 1200px) {
-  .hero .hero {
+@media screen and (min-width: 1200px) {
+  .hero {
     padding-top: 200px;
     padding-bottom: 200px;
     max-width: 1600px;
@@ -713,24 +705,9 @@ header {
   }
 }
 
-@media screen and (min-width: 768px) and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-width: 1200px) and (min-resolution: 2dppx) {
-  .hero .hero {
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/header-1200.jpg);
-  }
-}
-
-@media screen and (min-width: 768px) and (min-width: 1200px) {
-  .hero .hero-title {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: #ffffff;
   }
 }
 
