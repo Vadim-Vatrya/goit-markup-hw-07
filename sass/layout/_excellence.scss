@@ -1,6 +1,7 @@
 /* Преимущества*/
 .advantages-item {
   display: flex;
+  flex-direction: row;
   height: 120px;
   background-color: $secondary-bcg-color;
   justify-content: center;
@@ -14,7 +15,7 @@
 }
 
 .title {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
@@ -23,4 +24,48 @@
 }
 .decoration {
   color: $primary-text-color;
+}
+/*Мобилка*/
+
+@media screen and (max-width: 767px) {
+  .title {
+    text-align: center;
+  }
+  .decoration:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+/* Планшет */
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .item {
+    flex-basis: calc((100% - 30px) / 2);
+    margin-right: 30px;
+    margin-bottom: 30px;
+
+    &:nth-child(even) {
+      margin-right: 0px;
+    }
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advantages-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .item {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
 }

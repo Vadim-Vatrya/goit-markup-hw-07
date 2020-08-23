@@ -738,6 +738,7 @@ header {
 /* Преимущества*/
 .advantages-item {
   display: flex;
+  flex-direction: row;
   height: 120px;
   background-color: #f5f4fa;
   justify-content: center;
@@ -751,7 +752,7 @@ header {
 }
 
 .title {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
@@ -761,6 +762,45 @@ header {
 
 .decoration {
   color: #757575;
+}
+
+/*Мобилка*/
+@media screen and (max-width: 767px) {
+  .title {
+    text-align: center;
+  }
+  .decoration:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+/* Планшет */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .item {
+    flex-basis: calc((100% - 30px) / 2);
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+  .item:nth-child(even) {
+    margin-right: 0px;
+  }
+  .item:nth-last-child(-n + 2) {
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advantages-list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 /*  Чем мы занимаемся */
