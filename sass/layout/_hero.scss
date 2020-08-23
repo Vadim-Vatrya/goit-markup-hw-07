@@ -1,40 +1,53 @@
 /* Секция героя */
-
 .hero {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  max-width: 1600px;
-  height: 600px;
-  background-image: linear-gradient(
+  @media screen and (max-width: 768px) background-image: linear-gradient(
       $text-background-color,
       $text-background-color
     ),
-    url(../images/Hero/Herois.jpg);
+    url(../images/hero/header-480.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
-  &-item {
-    margin-top: 0px;
-    margin-bottom: 30px;
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: $primary-white-color;
-  }
 }
 
-.mainbutton {
-  @extend .subcribe__btn;
-  font-family: inherit;
+// .hero {
+//   text-align: center;
+//   margin-left: auto;
+//   margin-right: auto;
+//   padding-top: 200px;
+//   padding-bottom: 200px;
+//   max-width: 1600px;
+//   height: 600px;
+//   background-image: linear-gradient(
+//       $text-background-color,
+//       $text-background-color
+//     ),
+//     url(../images/Hero/Herois.jpg);
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: center;
 
-  &:hover {
-    background-color: $secondary-accent-color;
-  }
-}
+//   &-item {
+//     margin-top: 0px;
+//     margin-bottom: 30px;
+//     font-weight: 900;
+//     font-size: 44px;
+//     line-height: 1.36;
+//     text-align: center;
+//     letter-spacing: 0.06em;
+//     text-transform: uppercase;
+//     color: $primary-white-color;
+//   }
+// }
+
+// .mainbutton {
+//   @extend .subcribe__btn;
+//   font-family: inherit;
+
+//   &:hover {
+//     background-color: $secondary-accent-color;
+//   }
+// }
