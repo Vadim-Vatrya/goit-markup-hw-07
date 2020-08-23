@@ -736,26 +736,6 @@ header {
 }
 
 /* Преимущества*/
-.section .container {
-  display: flex;
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.advantages-list {
-  display: flex;
-  justify-content: space-between;
-}
-
-.item {
-  display: flex;
-  flex-direction: column;
-}
-
-.item:not(:last-child) {
-  margin-right: 30px;
-}
-
 .advantages-item {
   display: flex;
   height: 120px;
