@@ -1,40 +1,52 @@
 /*  Чем мы занимаемся */
 
-.section .container {
-  display: flex;
-  flex-direction: column;
-}
+.section-whatdoing {
+  padding-top: 0px;
+  padding-bottom: 94px;
 
-.working-list {
-  display: flex;
-
-  .item {
-    position: relative;
+  @media screen and (max-width: 1199px) {
+    display: none;
   }
 }
 
-.section-title {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  color: $secondary-text-color;
-  margin-bottom: 50px;
-}
+// .section-title {
+//   font-weight: bold;
+//   font-size: 36px;
+//   line-height: 1.17;
+//   text-align: center;
+//   padding: 0px;
+//   margin-top: 0px;
+//   margin-bottom: 50px;
 
-.working-list-item {
-  position: absolute;
-  width: 100%;
-  height: 70px;
-  bottom: 0;
-  left: 0px;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.14px;
-  text-align: center;
-  text-transform: uppercase;
-  color: $primary-white-color;
-  padding-top: 27px;
-  padding-bottom: 27px;
-  background: $text-background-color;
-}
+//   color: $secondary-text-color;
+
+//   &-list {
+//     position: relative;
+//     display: block;
+//     margin-right: 30px;
+//   }
+// }
+
+// .working-list-item {
+//   position: absolute;
+//   width: 100%;
+//   height: 70px;
+//   bottom: 0;
+//   left: 0px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   font-weight: bold;
+//   font-size: 14px;
+//   line-height: 1.14px;
+//   text-align: center;
+//   text-transform: uppercase;
+//   color: $primary-white-color;
+//   padding-top: 27px;
+//   padding-bottom: 27px;
+//   background: $text-background-color;
+// }
+
+// .working-list {
+//   display: flex;
+// }
