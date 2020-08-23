@@ -359,8 +359,7 @@ img {
   height: 20px;
 }
 
-/* Верхняя линия */
-/* Оформление логотипа */
+/*Хедер*/
 .logo {
   display: block;
   font-family: Raleway;
@@ -380,18 +379,20 @@ img {
 }
 
 .header .container {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-header .section {
+.header .section {
   padding-top: 0px;
   padding-bottom: 0px;
 }
 
 header {
   background-color: #ffffff;
+  border-bottom: 1px solid #ececec;
 }
 
 .icon-cross {
@@ -411,6 +412,7 @@ header {
 
 .site-nav-list, .contacts-links {
   position: relative;
+  align-items: center;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -593,11 +595,18 @@ header {
   .auth-nav {
     flex-direction: column;
   }
+  .current {
+    color: #2196f3;
+    fill: #2196f3;
+  }
+  .current::after {
+    bottom: 0;
+  }
 }
 
+/* Десктоп*/
 @media screen and (min-width: 1200px) {
   header .section {
-    height: 81px;
     padding-top: 0px;
     padding-bottom: 0px;
   }
