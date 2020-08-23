@@ -1,342 +1,329 @@
 /* Верхняя линия */
 
-.header {
-  position: relative;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 0.02em;
-  justify-content: center;
+/* Оформление логотипа */
+
+.logo {
+  display: block;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: $secondary-text-color;
   text-decoration: none;
-  &__wrap {
-    @media screen and (max-width: 767px) {
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  &-decoration {
+    color: $accent-color;
   }
 }
 
-// .logo {
-//   display: block;
-//   font-family: Raleway;
-//   font-style: normal;
-//   font-weight: bold;
-//   font-size: 24px;
-//   line-height: 1.17;
-//   letter-spacing: 0.03em;
-//   color: $secondary-text-color;
-//   text-decoration: none;
-//   padding-top: 16px;
-//   padding-bottom: 16px;
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-//   &-decoration {
-//     color: $accent-color;
-//   }
-// }
+header .section {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
 
-// .header .container {
+header {
+  background-color: $primary-white-color;
+  // border-bottom: 1px solid #ececec;
+}
+
+.icon-cross {
+  display: none;
+}
+
+// .navigation-wrapper {
 //   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-// }
-
-// header .section {
-//   padding-top: 0px;
-//   padding-bottom: 0px;
-// }
-
-// header {
-//   background-color: $primary-white-color;
-//   // border-bottom: 1px solid #ececec;
-// }
-
-// .icon-cross {
-//   display: none;
-// }
-
-// // .navigation-wrapper {
-// //   display: flex;
-// //   &.is-open {
-// //     display: block;
-// //   }
-
-// /* оформление навигации сайта */
-
-// .navigation,
-// .site-nav {
-//   display: flex;
-//   align-items: center;
-// }
-
-// .auth-nav {
-//   display: flex;
-// }
-
-// .site-nav-list {
-//   position: relative;
-//   font-style: normal;
-//   font-weight: 500;
-//   font-size: 18px;
-//   line-height: 1.17;
-//   letter-spacing: 0.02em;
-//   color: $secondary-text-color;
-//   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-//   &:hover,
-//   &:focus {
-//     color: $accent-color;
-//   }
-// }
-
-// .contacts-links {
-//   @extend .site-nav-list;
-//   display: flex;
-//   align-items: center;
-//   color: $primary-text-color;
-// }
-
-// .icon-smartphone {
-//   margin-right: 10px;
-//   fill: $primary-text-color;
-
-//   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-//   .contacts-links:focus &,
-//   .contacts-links:hover & {
-//     fill: $accent-color;
-//   }
-// }
-
-// .icon-envelope {
-//   @extend .icon-smartphone;
-// }
-
-// /* Оформление линии на активной странице*/
-
-// .current {
-//   color: $accent-color;
-//   fill: $accent-color;
-
-//   &::after {
-//     position: absolute;
-//     bottom: 0;
-//     content: "";
+//   &.is-open {
 //     display: block;
-//     width: 100%;
-//     height: 4px;
-//     border-radius: 2px;
-//     background-color: $accent-color;
-//   }
-// }
-// /* Для мобилки */
-
-// @media screen and (max-width: 767px) {
-//   header {
-//     position: relative;
-//     max-width: 767px;
-//     margin: 0 auto;
-//     height: 60px;
 //   }
 
-//   .navigation-wrapper {
-//     position: absolute;
-//     top: 100%;
-//     right: 0;
-//     width: 100%;
-//     height: 453px;
-//     text-align: center;
-//     background: $primary-white-color;
-//     opacity: 0;
-//     transform: scale(0);
-//     transition: transform 550ms linear;
+/* оформление навигации сайта */
 
-//     &.is-open {
-//       opacity: 1;
-//       transform: scale(1);
-//     }
-//   }
+.navigation,
+.site-nav {
+  display: flex;
+  align-items: center;
+}
 
-//   /*Кнопка  меню навигации */
+.auth-nav {
+  display: flex;
+}
 
-//   .menu-btn {
-//     display: inline-flex;
-//     position: relative;
-//     border: none;
-//     margin: 0;
-//     padding: 0;
-//     background-color: transparent;
+.site-nav-list {
+  position: relative;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: $secondary-text-color;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-//     &.menu-btn.icon-cross {
-//       display: none;
-//     }
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
 
-//     &.is-open .icon-cross {
-//       display: block;
-//     }
+.contacts-links {
+  @extend .site-nav-list;
+  display: flex;
+  align-items: center;
+  color: $primary-text-color;
+}
 
-//     &.is-open .icon-menu {
-//       display: none;
-//     }
+.icon-smartphone {
+  margin-right: 10px;
+  fill: $primary-text-color;
 
-//     &:hover .icon-cross,
-//     &:focus .icon-cross,
-//     &:hover .icon-menu,
-//     &:focus .icon-menu {
-//       fill: $accent-color;
-//     }
-//   }
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-//   /* Оформление навигации */
+  .contacts-links:focus &,
+  .contacts-links:hover & {
+    fill: $accent-color;
+  }
+}
 
-//   .site-nav,
-//   .navigation {
-//     display: block;
-//     margin-bottom: 60px;
-//     padding-top: 60px;
-//   }
+.icon-envelope {
+  @extend .icon-smartphone;
+}
 
-//   .auth-nav {
-//     display: block;
-//     padding-bottom: 60px;
-//   }
+/* Оформление линии на активной странице*/
 
-//   .site-nav-list {
-//     font-style: normal;
-//     font-weight: 500;
-//     font-size: 18px;
-//     line-height: 1.17;
-//     letter-spacing: 0.02em;
-//     color: $secondary-text-color;
+.current {
+  color: $accent-color;
+  fill: $accent-color;
 
-//     &:hover,
-//     &:focus {
-//       color: $accent-color;
-//     }
-//   }
+  &::after {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $accent-color;
+  }
+}
+/* Для мобилки */
 
-//   .site-nav-item:not(:last-child) {
-//     margin-bottom: 40px;
-//   }
+@media screen and (max-width: 767px) {
+  header .section {
+    position: relative;
+    max-width: 767px;
+    margin: 0 auto;
+    height: 60px;
+  }
 
-//   .contacts-links {
-//     font-style: normal;
-//     font-weight: 500;
-//     font-size: 18px;
-//     line-height: 1.17;
-//     letter-spacing: 0.02em;
-//     color: $primary-text-color;
-//   }
+  .navigation-wrapper {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    height: 453px;
+    text-align: center;
+    background: $primary-white-color;
+    opacity: 0;
+    transform: scale(0);
+    transition: transform 550ms linear;
 
-//   .auth-nav-item:not(:last-child) {
-//     margin-bottom: 16px;
-//   }
+    &.is-open {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
 
-//   .current::after {
-//     bottom: -8px;
-//   }
-// }
+  /*Кнопка  меню навигации */
 
-// /* Для планшета */
+  .menu-btn {
+    display: inline-flex;
+    position: relative;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
 
-// @media screen and (min-width: $tablet) {
-//   header {
-//     max-width: 1199px;
-//     margin: 0 auto;
-//     height: 80px;
-//   }
+    &.menu-btn.icon-cross {
+      display: none;
+    }
 
-//   .menu-btn {
-//     display: none;
-//   }
+    &.is-open .icon-cross {
+      display: block;
+    }
 
-//   .navigation-wrapper {
-//     display: flex;
-//     align-items: center;
-//   }
+    &.is-open .icon-menu {
+      display: none;
+    }
 
-//   .navigation {
-//     margin-right: 84px;
-//   }
+    &:hover .icon-cross,
+    &:focus .icon-cross,
+    &:hover .icon-menu,
+    &:focus .icon-menu {
+      fill: $accent-color;
+    }
+  }
 
-//   .site-nav-list {
-//     padding-top: 32px;
-//     padding-bottom: 32px;
-//     font-size: 14px;
-//     font-style: normal;
-//     font-weight: 500;
-//     line-height: 1.17;
-//     letter-spacing: 0.02em;
-//     color: $secondary-text-color;
-//   }
-//   .site-nav-item:not(:last-child) {
-//     margin-right: 50px;
-//   }
+  /* Оформление навигации */
 
-//   .contacts-links {
-//     font-style: normal;
-//     font-weight: 500;
-//     font-size: 12px;
-//     line-height: 1.17;
-//     letter-spacing: 0.02em;
-//     padding-top: 0px;
-//     padding-bottom: 0px;
-//   }
+  .site-nav,
+  .navigation {
+    display: block;
+    margin-bottom: 60px;
+    padding-top: 60px;
+  }
 
-//   .auth-nav-item:not(:last-child) {
-//     margin-bottom: 10px;
-//   }
+  .auth-nav {
+    display: block;
+    padding-bottom: 60px;
+  }
 
-//   .auth-nav {
-//     flex-direction: column;
-//   }
-// }
+  .site-nav-list {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: $secondary-text-color;
 
-// @media screen and (min-width: $desktop) {
-//   header {
-//     height: 81px;
-//     padding-top: 0px;
-//     padding-bottom: 0px;
-//   }
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
 
-//   .logo {
-//     margin-right: 85px;
-//     font-size: 26px;
-//     line-height: 1.19;
-//   }
-//   .navigation {
-//     margin-right: 305px;
-//   }
+  .site-nav-item:not(:last-child) {
+    margin-bottom: 40px;
+  }
 
-//   .site-nav-list {
-//     font-size: 14px;
-//     line-height: 1.14;
-//     letter-spacing: 0.02em;
-//     padding-top: 32px;
-//     padding-bottom: 32px;
-//   }
+  .contacts-links {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: $primary-text-color;
+  }
 
-//   .contacts-links {
-//     font-size: 14px;
-//     line-height: 1.14;
-//     letter-spacing: 0.02em;
-//     padding-top: 32px;
-//     padding-bottom: 32px;
-//   }
+  .auth-nav-item:not(:last-child) {
+    margin-bottom: 16px;
+  }
 
-//   .auth-nav {
-//     display: flex;
-//     flex-direction: row;
+  .current::after {
+    bottom: -8px;
+  }
+}
 
-//     &-item:not(:last-child) {
-//       margin-right: 30px;
-//       margin-bottom: 0px;
-//     }
-//   }
-//   .current {
-//     color: $accent-color;
-//     fill: $accent-color;
+/* Для планшета */
 
-//     &::after {
-//       bottom: 0;
-//     }
-//   }
-// }
+@media screen and (min-width: $tablet) {
+  header .section {
+    max-width: 1199px;
+    margin: 0 auto;
+    height: 80px;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  .navigation-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .navigation {
+    margin-right: 84px;
+  }
+
+  .site-nav-list {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: $secondary-text-color;
+  }
+  .site-nav-item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  .contacts-links {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .auth-nav-item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .auth-nav {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  header .section {
+    height: 81px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .logo {
+    margin-right: 85px;
+    font-size: 26px;
+    line-height: 1.19;
+  }
+  .navigation {
+    margin-right: 305px;
+  }
+
+  .site-nav-list {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .contacts-links {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .auth-nav {
+    display: flex;
+    flex-direction: row;
+
+    &-item:not(:last-child) {
+      margin-right: 30px;
+      margin-bottom: 0px;
+    }
+  }
+  .current {
+    color: $accent-color;
+    fill: $accent-color;
+
+    &::after {
+      bottom: 0;
+    }
+  }
+}
