@@ -2,143 +2,233 @@
 
 .footer-section {
   background-color: $primary-bcg-color;
-
-  .container {
-    display: flex;
-    background-color: $primary-bcg-color;
-  }
-
-  .logo {
-    display: flex;
-    color: $secondary-white-color;
-    margin-bottom: 20px;
-  }
-  .title {
-    font-weight: bold;
-    text-transform: uppercase;
-    color: $secondary-white-color;
-  }
 }
 
-.contact {
+.footer-section {
   padding-top: 60px;
   padding-bottom: 60px;
-  margin-right: 69px;
+}
+
+.logo-footer {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+  text-align: center;
+  color: $primary-white-color;
 }
 
 .footer {
   color: $accent-color;
 }
 
-.adress-list {
-  display: flex;
-}
-
-.adress-list-point:not(:last-child) {
-  margin-bottom: 9px;
-}
-
-.join {
-  padding-top: 70px;
-  padding-bottom: 100px;
-  margin-right: 96px;
-}
-
-.title {
-  display: block;
+.map {
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  color: $primary-white-color;
 }
 
 .mail,
 .phone {
-  font-style: normal;
-  line-height: 1.71px;
-  color: $primary-text-color;
+  @extend .map;
+  color: $footer-links-color;
 }
 
-.map {
-  font-style: normal;
-  color: $secondary-white-color;
+.adress-list-point:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.contact {
+  margin-bottom: 60px;
+}
+
+.title {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $primary-white-color;
 }
 
 .title-list {
   display: flex;
-  justify-content: space-between;
-}
-
-.title-list-icon {
-  display: flex;
   justify-content: center;
-  align-items: center;
 
-  &:not(:last-child) {
+  &-item:not(:last-child) {
     margin-right: 10px;
   }
 }
 
-.footer-icon {
-  @extend .social-list-icon-list;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: $secondary-white-color;
-}
-
-.footer-icon-list {
-  @extend .social-list-icon-link-svg;
-  fill: $secondary-white-color;
+.subscribe-title {
+  @extend .title;
 }
 
 /* Кнопка подвала */
 
-.subcribe {
-  padding-top: 72px;
-  padding-bottom: 94px;
-}
-
-.subcribe_title {
-  display: block;
-  margin-bottom: 20px;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: $secondary-white-color;
-}
-
-.subcribe__container {
-  display: flex;
-}
-
 .subcribe__input {
-  width: 358px;
-  height: 50px;
   padding-top: 15px;
+  padding-right: 16px;
   padding-bottom: 15px;
   padding-left: 16px;
-  margin-right: 12px;
-  background-color: transparent;
+  width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  box-sizing: border-box;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  color: $secondary-white-color;
-}
-
-.subcribe__input::placeholder {
+  background-color: $primary-bcg-color;
   font-size: 16px;
   line-height: 1.25;
-  letter-spacing: 0.03em;
+  align-items: center;
   color: $footer-links-color;
 }
 
-.subcribe__btn {
-  justify-content: center;
+.icon-icon_send {
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+  fill: $primary-white-color;
+}
+@media screen and (max-width: 767px) {
+  footer > .container {
+    text-align: center;
+  }
+  .form-field-input {
+    margin-bottom: 20px;
+  }
 }
 
-.subcribe__text {
-  margin-right: 10px;
-}
-.subcribe__icon {
-  width: 24px;
-  height: 24px;
-  fill: $secondary-white-color;
-}
+//   .container {
+//     display: flex;
+//     background-color: $primary-bcg-color;
+//   }
+
+//   .logo {
+//     display: flex;
+//     color: $secondary-white-color;
+//     margin-bottom: 20px;
+//   }
+//   .title {
+//     font-weight: bold;
+//     text-transform: uppercase;
+//     color: $secondary-white-color;
+//   }
+// }
+
+// .contact {
+//   padding-top: 60px;
+//   padding-bottom: 60px;
+//   margin-right: 69px;
+// }
+
+// .footer {
+//   color: $accent-color;
+// }
+
+// .adress-list {
+//   display: flex;
+// }
+
+// .adress-list-point:not(:last-child) {
+//   margin-bottom: 9px;
+// }
+
+// .join {
+//   padding-top: 70px;
+//   padding-bottom: 100px;
+//   margin-right: 96px;
+// }
+
+// .title {
+//   display: block;
+// }
+
+// .mail,
+// .phone {
+//   font-style: normal;
+//   line-height: 1.71px;
+//   color: $primary-text-color;
+// }
+
+// .title-list {
+//   display: flex;
+//   justify-content: space-between;
+// }
+
+// .title-list-icon {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+
+//   &:not(:last-child) {
+//     margin-right: 10px;
+//   }
+// }
+
+// .footer-icon {
+//   @extend .social-list-icon-list;
+//   background-color: rgba(255, 255, 255, 0.1);
+//   color: $secondary-white-color;
+// }
+
+// .footer-icon-list {
+//   @extend .social-list-icon-link-svg;
+//   fill: $secondary-white-color;
+// }
+
+// /* Кнопка подвала */
+
+// .subcribe {
+//   padding-top: 72px;
+//   padding-bottom: 94px;
+// }
+
+// .subcribe_title {
+//   display: block;
+//   margin-bottom: 20px;
+//   font-weight: bold;
+//   font-size: 14px;
+//   line-height: 1.14;
+//   letter-spacing: 0.03em;
+//   text-transform: uppercase;
+//   color: $secondary-white-color;
+// }
+
+// .subcribe__container {
+//   display: flex;
+// }
+
+// .subcribe__input {
+//   width: 358px;
+//   height: 50px;
+//   padding-top: 15px;
+//   padding-bottom: 15px;
+//   padding-left: 16px;
+//   margin-right: 12px;
+//   background-color: transparent;
+//   border: 1px solid rgba(255, 255, 255, 0.3);
+//   box-sizing: border-box;
+//   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+//   border-radius: 4px;
+//   color: $secondary-white-color;
+// }
+
+// .subcribe__input::placeholder {
+//   font-size: 16px;
+//   line-height: 1.25;
+//   letter-spacing: 0.03em;
+//   color: $footer-links-color;
+// }
+
+// .subcribe__btn {
+//   justify-content: center;
+// }
+
+// .subcribe__text {
+//   margin-right: 10px;
+// }
+// .subcribe__icon {
+//   width: 24px;
+//   height: 24px;
+//   fill: $secondary-white-color;
+// }
