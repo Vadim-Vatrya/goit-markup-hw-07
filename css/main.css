@@ -857,8 +857,8 @@ header {
 }
 
 /* Наша команда */
-.team .section {
-  background-color: #f5f4fa;
+.team.section {
+  background-color: #757575;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -905,6 +905,41 @@ header {
 .social-list {
   display: flex;
   justify-content: center;
+}
+
+/* Мобилка */
+@media screen and (max-width: 767px) {
+  .team-title .item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+/* Планшет */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .team-title {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .team-title .item {
+    width: calc((100% - 30px) / 2);
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+  .team-title .item:nth-child(even) {
+    margin-right: 0px;
+  }
+  .team-title .item:nth-last-child(-n + 2) {
+    margin-bottom: 0px;
+  }
+}
+
+/* Десктоп*/
+@media screen and (min-width: 1200px) {
+  .team-title {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
 }
 
 /* Клиенты */

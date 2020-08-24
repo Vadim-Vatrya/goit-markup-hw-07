@@ -1,7 +1,7 @@
 /* Наша команда */
 
-.team .section {
-  background-color: $secondary-bcg-color;
+.team.section {
+  background-color: $primary-text-color;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -51,65 +51,43 @@
   justify-content: center;
 }
 
-// .team-title {
-//   display: flex;
-//   align-content: space-between;
+/* Мобилка */
 
-//   .item {
-//     background-color: $primary-white-color;
-//     border: 1px solid $portfolio-card-border-color;
-//     border-radius: 0px 0px 4px 4px;
-//     box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
-//       0px 1px 3px rgba(0, 0, 0, 0.12);
-//   }
-// }
+@media screen and (max-width: 767px) {
+  .team-title .item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}
 
-// .team-title-info {
-//   display: flex;
-//   flex-direction: column;
-// }
+/* Планшет */
 
-// .title-name {
-//   font-weight: 500;
-//   font-size: 16px;
-//   line-height: 1.18;
-//   text-align: center;
-//   color: $secondary-text-color;
-//   padding-top: 30px;
-//   margin-bottom: 10px;
-// }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .team-title {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .team-title .item {
+    width: calc((100% - 30px) / 2);
+    margin-right: 30px;
+    margin-bottom: 30px;
 
-// .social-list {
-//   display: flex;
-//   justify-content: center;
-//   padding-bottom: 24px;
-// }
+    &:nth-child(even) {
+      margin-right: 0px;
+    }
 
-// .social-list-icon:not(:last-child) {
-//   margin-right: 10px;
-// }
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0px;
+    }
+  }
+}
 
-// .social-list-icon-list {
-//   background-color: $primary-white-color;
-//   background-repeat: no-repeat;
-//   background-position: center;
-//   cursor: pointer;
-//   fill: $socials-main-color;
-// }
-
-// .social-list-icon-link-svg {
-//   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-//   &:hover,
-//   &:focus {
-//     fill: $primary-white-color;
-//   }
-// }
-
-// .team-title-position {
-//   font-size: 16px;
-//   line-height: 1.18;
-//   text-align: center;
-//   color: $primary-text-color;
-//   margin-bottom: 16px;
-// }
+/* Десктоп*/
+@media screen and (min-width: 1200px) {
+  .team-title {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+}
