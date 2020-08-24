@@ -997,7 +997,7 @@ header {
   color: #212121;
 }
 
-.clients-list {
+.client-list {
   display: flex;
   flex-wrap: wrap;
 }
