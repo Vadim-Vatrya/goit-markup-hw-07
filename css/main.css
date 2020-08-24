@@ -35,23 +35,24 @@ img {
 .container {
   padding-left: 15px;
   padding-right: 15px;
+  min-width: 358px;
 }
 
 @media screen and (min-width: 480px) {
-  .container {
+  .container .container {
     width: 480px;
     margin: 0 auto;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .container {
+  .container .container {
     width: 768px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .container {
+  .container .container {
     width: 1200px;
   }
 }
@@ -798,8 +799,11 @@ header {
     display: flex;
     justify-content: space-between;
   }
-  .item:not(:last-child) {
+  .item {
     margin-right: 30px;
+  }
+  .item:last-child {
+    margin-right: 0px;
   }
 }
 
@@ -829,7 +833,6 @@ header {
 .item {
   position: relative;
   display: block;
-  margin-right: 30px;
 }
 
 .working-list {
@@ -858,7 +861,7 @@ header {
 
 /* Наша команда */
 .team.section {
-  background-color: #757575;
+  background-color: #f5f4fa;
   padding-top: 60px;
   padding-bottom: 60px;
 }
