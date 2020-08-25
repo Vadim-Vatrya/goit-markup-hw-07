@@ -58,8 +58,17 @@
   justify-content: center;
 }
 
-.title-list-icon &:not(:last-child) {
+.title-list-icon:not(:last-child) {
   margin-right: 10px;
+}
+
+.subcribe_title {
+  display: block;
+  margin-top: 60px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $primary-white-color;
 }
 
 .footer-icon {
@@ -85,10 +94,6 @@
   background-color: $accent-color;
 }
 
-.subscribe-title {
-  @extend .title;
-}
-
 /* Кнопка подвала */
 
 .subcribe__input {
@@ -104,154 +109,87 @@
   line-height: 1.25;
   align-items: center;
   color: $footer-links-color;
+  margin-top: 20px;
 }
 
-.icon-icon_send {
+.subcribe-btn {
+  width: 200px;
+}
+
+.subcribe__icon {
   margin-left: 10px;
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   fill: $primary-white-color;
 }
+
 @media screen and (max-width: 767px) {
   footer > .container {
     text-align: center;
   }
-  .form-field-input {
+  .subcribe__btn {
+    margin-top: 20px;
+  }
+}
+
+/* Планшет*/
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  footer > .container {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  .contact {
+    width: 50%;
+    margin-bottom: 60px;
+  }
+  .join {
+    width: 50%;
+    margin-bottom: 60px;
+  }
+  .subcribe__input {
+    width: 450px;
     margin-bottom: 20px;
   }
 }
 
-//   .container {
-//     display: flex;
-//     background-color: $primary-bcg-color;
-//   }
+@media screen and (min-width: 1200px) {
+  footer > .container {
+    display: flex;
+    align-items: baseline;
+  }
+  .contact {
+    margin-right: 69px;
+  }
+  .adress-list-point:not(:last-child) {
+    margin-bottom: 9px;
+  }
+  .join {
+    margin-right: 94px;
+  }
+  .subcribe__field {
+    display: flex;
+  }
 
-//   .logo {
-//     display: flex;
-//     color: $secondary-white-color;
-//     margin-bottom: 20px;
-//   }
-//   .title {
-//     font-weight: bold;
-//     text-transform: uppercase;
-//     color: $secondary-white-color;
-//   }
-// }
-
-// .contact {
-//   padding-top: 60px;
-//   padding-bottom: 60px;
-//   margin-right: 69px;
-// }
-
-// .footer {
-//   color: $accent-color;
-// }
-
-// .adress-list {
-//   display: flex;
-// }
-
-// .adress-list-point:not(:last-child) {
-//   margin-bottom: 9px;
-// }
-
-// .join {
-//   padding-top: 70px;
-//   padding-bottom: 100px;
-//   margin-right: 96px;
-// }
-
-// .title {
-//   display: block;
-// }
-
-// .mail,
-// .phone {
-//   font-style: normal;
-//   line-height: 1.71px;
-//   color: $primary-text-color;
-// }
-
-// .title-list {
-//   display: flex;
-//   justify-content: space-between;
-// }
-
-// .title-list-icon {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-
-//   &:not(:last-child) {
-//     margin-right: 10px;
-//   }
-// }
-
-// .footer-icon {
-//   @extend .social-list-icon-list;
-//   background-color: rgba(255, 255, 255, 0.1);
-//   color: $secondary-white-color;
-// }
-
-// .footer-icon-list {
-//   @extend .social-list-icon-link-svg;
-//   fill: $secondary-white-color;
-// }
-
-// /* Кнопка подвала */
-
-// .subcribe {
-//   padding-top: 72px;
-//   padding-bottom: 94px;
-// }
-
-// .subcribe_title {
-//   display: block;
-//   margin-bottom: 20px;
-//   font-weight: bold;
-//   font-size: 14px;
-//   line-height: 1.14;
-//   letter-spacing: 0.03em;
-//   text-transform: uppercase;
-//   color: $secondary-white-color;
-// }
-
-// .subcribe__container {
-//   display: flex;
-// }
-
-// .subcribe__input {
-//   width: 358px;
-//   height: 50px;
-//   padding-top: 15px;
-//   padding-bottom: 15px;
-//   padding-left: 16px;
-//   margin-right: 12px;
-//   background-color: transparent;
-//   border: 1px solid rgba(255, 255, 255, 0.3);
-//   box-sizing: border-box;
-//   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-//   border-radius: 4px;
-//   color: $secondary-white-color;
-// }
-
-// .subcribe__input::placeholder {
-//   font-size: 16px;
-//   line-height: 1.25;
-//   letter-spacing: 0.03em;
-//   color: $footer-links-color;
-// }
-
-// .subcribe__btn {
-//   justify-content: center;
-// }
-
-// .subcribe__text {
-//   margin-right: 10px;
-// }
-// .subcribe__icon {
-//   width: 24px;
-//   height: 24px;
-//   fill: $secondary-white-color;
-// }
+  .subcribe__input {
+    margin-right: 10px;
+    width: 358px;
+    height: 50px;
+    padding-top: 15px;
+    padding-right: 16px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    background-color: $primary-bcg-color;
+    font-size: 16px;
+    line-height: 1.25;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: $footer-links-color;
+  }
+}

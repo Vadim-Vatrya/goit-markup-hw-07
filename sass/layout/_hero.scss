@@ -38,6 +38,7 @@
   .mainbutton {
     @extend .subcribe__btn;
     font-family: inherit;
+    min-width: 200px;
 
     &:hover {
       background-color: $secondary-accent-color;

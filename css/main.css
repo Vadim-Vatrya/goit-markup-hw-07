@@ -69,11 +69,13 @@ img {
   display: inline-flex;
   background-color: #2196f3;
   color: #ffffff;
-  padding: 10px 32px;
-  min-width: 200px;
+  padding: 10px 28px;
+  width: 200px;
   border-radius: 4px;
   border-width: 0px;
   height: 50px;
+  justify-content: center;
+  align-items: center;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
@@ -683,6 +685,7 @@ header {
 
 .hero .mainbutton {
   font-family: inherit;
+  min-width: 200px;
 }
 
 .hero .mainbutton:hover {
@@ -753,7 +756,7 @@ header {
   height: 70px;
 }
 
-.title, .subscribe-title {
+.title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -768,7 +771,7 @@ header {
 
 /*Мобилка*/
 @media screen and (max-width: 767px) {
-  .title, .subscribe-title {
+  .title {
     text-align: center;
   }
   .decoration:not(:last-child) {
@@ -1129,7 +1132,7 @@ header {
   margin-bottom: 60px;
 }
 
-.title, .subscribe-title {
+.title {
   display: block;
   margin-bottom: 20px;
   font-weight: 700;
@@ -1143,8 +1146,17 @@ header {
   justify-content: center;
 }
 
-.title-list:not(:last-child) {
+.title-list-icon:not(:last-child) {
   margin-right: 10px;
+}
+
+.subcribe_title {
+  display: block;
+  margin-top: 60px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 
 .footer-icon {
@@ -1184,12 +1196,17 @@ header {
   line-height: 1.25;
   align-items: center;
   color: rgba(255, 255, 255, 0.6);
+  margin-top: 20px;
 }
 
-.icon-icon_send {
+.subcribe-btn {
+  width: 200px;
+}
+
+.subcribe__icon {
   margin-left: 10px;
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   fill: #ffffff;
 }
 
@@ -1197,8 +1214,67 @@ header {
   footer > .container {
     text-align: center;
   }
-  .form-field-input {
+  .subcribe__btn, .hero .mainbutton {
+    margin-top: 20px;
+  }
+}
+
+/* Планшет*/
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  footer > .container {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+  }
+  .contact {
+    width: 50%;
+    margin-bottom: 60px;
+  }
+  .join {
+    width: 50%;
+    margin-bottom: 60px;
+  }
+  .subcribe__input {
+    width: 450px;
     margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  footer > .container {
+    display: flex;
+    align-items: baseline;
+  }
+  .contact {
+    margin-right: 69px;
+  }
+  .adress-list-point:not(:last-child) {
+    margin-bottom: 9px;
+  }
+  .join {
+    margin-right: 94px;
+  }
+  .subcribe__field {
+    display: flex;
+  }
+  .subcribe__input {
+    margin-right: 10px;
+    width: 358px;
+    height: 50px;
+    padding-top: 15px;
+    padding-right: 16px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    background-color: #2f303a;
+    font-size: 16px;
+    line-height: 1.25;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
   }
 }
 
