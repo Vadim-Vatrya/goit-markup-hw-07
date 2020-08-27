@@ -155,6 +155,11 @@
     width: 450px;
     margin-bottom: 20px;
   }
+  .subcribe__field {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -173,6 +178,8 @@
   }
   .subcribe__field {
     display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .subcribe__input {
