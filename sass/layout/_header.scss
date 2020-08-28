@@ -39,11 +39,16 @@ header {
   display: none;
 }
 
-// .navigation-wrapper {
-//   display: flex;
-//   &.is-open {
-//     display: block;
-//   }
+.header.main {
+  border: 0px;
+}
+
+.navigation-wrapper {
+  display: flex;
+  &.is-open {
+    display: block;
+  }
+}
 
 /* оформление навигации сайта */
 
@@ -99,19 +104,36 @@ header {
 
 .current {
   color: $accent-color;
-  fill: $accent-color;
+}
 
+.current {
   &::after {
-    position: absolute;
-    bottom: 0;
     content: "";
     display: block;
+    position: absolute;
     width: 100%;
     height: 4px;
+    bottom: 0;
+    background: $accent-color;
     border-radius: 2px;
-    background-color: $accent-color;
   }
 }
+
+// .current {
+//   color: $accent-color;
+//   fill: $accent-color;
+
+//   &::after {
+//     position: absolute;
+//     bottom: 0;
+//     content: "";
+//     display: block;
+//     width: 100%;
+//     height: 4px;
+//     border-radius: 2px;
+//     background-color: $accent-color;
+//   }
+// }
 /* Для мобилки */
 
 @media screen and (max-width: 767px) {
@@ -180,8 +202,10 @@ header {
   }
 
   .auth-nav {
-    display: block;
+    display: flex;
     padding-bottom: 60px;
+    flex-direction: column;
+    justify-items: center;
   }
 
   .site-nav-list {
@@ -215,15 +239,28 @@ header {
     margin-bottom: 16px;
   }
 
-  .current::after {
-    bottom: -8px;
+  .current {
+    color: $accent-color;
+    fill: $accent-color;
+
+    &::after {
+      position: absolute;
+      bottom: -8px;
+      left: 2px;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background-color: $accent-color;
+    }
   }
 }
 
 /* Для планшета */
 
 @media screen and (min-width: $tablet) {
-  header .section {
+  header .container {
     max-width: 1199px;
     margin: 0 auto;
     height: 80px;
