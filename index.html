@@ -87,14 +87,15 @@
               <b class="modal__invite">Оставьте свои данные, мы вам перезвоним</b>
               <form action="" class="service-order">
                 <label class="service-order__label">
-                  <input class="service-order__input" type="text" name="name" placeholder=" " required/><span
-                    class="service-order__text">Имя</span>
+                  <input class="service-order__input" type="text" name="name" placeholder=" " required/>
+                  <span class="service-order__text">Имя</span>
                   <svg class="service-order__icon">
                     <use href="./images/sprite.svg#icon-person"></use>
                   </svg>
                 </label>
                 <label class="service-order__label">
-                  <input class="service-order__input" type="tel" name="tel" placeholder=" " /><span class="service-order__text">Телефон</span>
+                  <input class="service-order__input" type="tel" name="tel" placeholder=" " />
+                  <span class="service-order__text">Телефон</span>
                   <svg class="service-order__icon">
                     <use href="./images/sprite.svg#icon-tel"></use>
                   </svg>
@@ -117,8 +118,11 @@
                       <use href="./images/sprite.svg#icon-checkbox"></use>
                     </svg>
                   </span>
-                  <span class="checkbox__text">Соглашаюсь с рассылкой и принимаю</span>
-                  <a class="link" href=""><span class="checkbox__link">Условия договора</span></a>
+                  <div class="checkbox__text--decoration">
+                    <span class="checkbox__text">Соглашаюсь с рассылкой и принимаю</span>
+                    <a class="link" href=""><span class="checkbox__link">Условия договора</span></a>
+                  </div>
+                  
                 </label>
                 <button class="mainbutton" type="submit">
                   Отправить
