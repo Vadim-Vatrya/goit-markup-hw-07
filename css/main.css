@@ -448,6 +448,7 @@ header {
 
 .auth-nav {
   display: flex;
+  align-items: center;
 }
 
 .site-nav-list, .contacts-links {
@@ -523,6 +524,7 @@ header {
   .navigation-wrapper.is-open {
     opacity: 1;
     transform: scale(1);
+    z-index: 999;
   }
   /*Кнопка  меню навигации */
   .menu-btn {

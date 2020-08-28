@@ -60,6 +60,7 @@ header {
 
 .auth-nav {
   display: flex;
+  align-items: center;
 }
 
 .site-nav-list {
@@ -159,6 +160,7 @@ header {
     &.is-open {
       opacity: 1;
       transform: scale(1);
+      z-index: 999;
     }
   }
 
