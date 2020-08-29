@@ -54,7 +54,7 @@
         $text-background-color,
         $text-background-color
       ),
-      url(../images/header-768.jpg);
+      url("../images/header-768.jpg");
 
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
@@ -63,7 +63,7 @@
           $text-background-color,
           $text-background-color
         ),
-        url(../images/header-768@2x.jpg);
+        url("../images/header-768@2x.jpg");
     }
   }
 }
@@ -79,7 +79,7 @@
         $text-background-color,
         $text-background-color
       ),
-      url(../images/header-1200.jpg);
+      url("../images/header-1200.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -91,7 +91,7 @@
           $text-background-color,
           $text-background-color
         ),
-        url(../images/header-1200.jpg);
+        url("../images/header-1200.jpg");
     }
 
     &-item {
